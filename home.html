@@ -2,13 +2,63 @@
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <title>AB Testing</title>
     <link rel="stylesheet" href="index.css">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
   <body>
-    <!-- TODO: put your HTML code here! -->
+   <h2><i>AB Testing</i></h2>
+    <h1>Which Website is Better?</h1>
+
+    <h2> Overview </h2>
+    <p>
+       In this project I sought to determine whether the changes I made to website provided a better user experience. To do this, I used AB testing on 24 users, then analyzed the data I processed about time spent on the website and the rate to which users returned to the website using T-Tests and Chi-Squared tests.
+
+    </p>
+    <h3>The Websites</h3>
+    <p>Below are images of the two websites I used for the AB Testing. You can see the live websites <a href="https://frozen-beyond-92599.herokuapp.com/">here</a>. If you refresh the page a few times, you will see it switch between A and B.</p>
+    <div class="website-imgs">
+	    <div class="A">
+	    <h4>Website A</h4>
+	      <img src="websiteA.png"/>
+	    </div>
+	    <div class="B">
+	    	<h4>Website B</h4>
+	      <img src="websiteB.png"/>
+	    </div>
+	</div>
+
+    <h2> Hypotheses </h2>
+    <h3>Time to Completion</h3>
+    I hypothesize that by moving item prices to a new line above the description in Website B will make it easier for users to see the price, and therefore make it easier for them keep track of how many cacti they bought, which will make them complete the task faster.
+     <p><b>Null Hypotheses:</b> Moving item prices to above the description will have no effect on the time it takes users to complete the task.</p>
+    <p><b>Alternate Hypotheses:</b> Moving item prices to above the description will make users complete the task faster.</p>
+
+
+    <h3>Return Rate</h3>
+    I hypothesize that having link to go to the cart after each item in Website B, rather than only having one button to go to the cart in Website A, makes it easier for users to switch back and forth between the main page and the cart, and more back and forth means more returns to the page.
+    <p><b>Null Hypotheses:</b> Adding a link to go to the cart will not affect the return rate.</p>
+    <p><b>Alternate Hypotheses:</b> Adding a link to go to the cart after each item will increase the return rate. </p>
+
+ <h2>Data Collection</h2>
+ <p>I collected data by deploying my two websites on heroku as a single website that will randomly select whether to show Website A or Website B. I then sent this link to other students in the class who were told to complete the task of adding $150 worth of cacti to the cart. 24 students visited the website and completed the task (I removed 3 visitors who arrived at the webpage and did not do anything). I retrieved the data from heroku concerning time to completion and return rate using heroku logs, then converted it to a csv so that I could process and clean it by hand.  </p>
+  
+
+    <h2> Infographic </h2>
+    <p>I created an infographic using Adobe XD to better display the results of my experiment. This infographic is shown below.</p>
+    <div class="prototype-img">
+    <img src='infographic.png' alt='infographic'>
+</div>
+
+    <h2>Conclusions & Takeaways </h2>
+    <p>Based on the findings of this study, there is no statistical significance between the two websites I tested in terms of time to completion and return rate. Given this, I would conclude that the changes I implemented––making the price more prominent and adding links to the cart––were not big enough or important changes to meaningfully impact the user experience. However, a few limitations that I would want to address before making this conclusion are:</p>
+    <ul>
+    	<li>The people who were tested were more likely to have seen  Website A’s format before because this was the base template given to us by TAs, which many others kept as well.  Therefore, it is possible that since people were familiar with this interface, they had already learned it which is what caused it to have better time to completion and return rate averages.</li>
+    	<li>The users tested in this study were not actually buying cacti, so there is a question of how representative they are to real users. They also tested my websites along with many others, so they might not have taken the task as seriously or deliberately as real users may.</li>
+    	<li>I was only able to collect data from 24 users. More data would have been better to make a confident conclusion. </li>
+    </ul>
+
   </body>
 </html>
