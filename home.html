@@ -14,7 +14,7 @@
 
     <h2> Overview </h2>
     <p>
-       In this project I sought to determine whether the changes I made to website provided a better user experience. To do this, I used AB testing on 24 users, then analyzed the data I processed about time spent on the website and the rate to which users returned to the website using T-Tests and Chi-Squared tests.
+       In this project I sought to determine whether the changes I made to website provided a better user experience. To do this, I conducted AB testing on 24 users and compared the amount of time users spent on each website and the rate at which users returned to each website. I then used T-Tests and Chi-Squared tests to find whether the differences were significant, and based on this I found that the two websites showed no statistical difference.
 
     </p>
     <h3>The Websites</h3>
@@ -29,6 +29,8 @@
 	      <img src="websiteB.png"/>
 	    </div>
 	</div>
+	<p>The main differences between the websites are that in Website B, the prices for each item have been move to a line about the description to be more prominent, a link to go to the cart has been added after each item, and the main cart button has been moved to the top.
+
 
     <h2> Hypotheses </h2>
     <h3>Time to Completion</h3>
@@ -39,11 +41,11 @@
 
     <h3>Return Rate</h3>
     I hypothesize that having link to go to the cart after each item in Website B, rather than only having one button to go to the cart in Website A, makes it easier for users to switch back and forth between the main page and the cart, and more back and forth means more returns to the page.
-    <p><b>Null Hypotheses:</b> Adding a link to go to the cart will not affect the return rate.</p>
-    <p><b>Alternate Hypotheses:</b> Adding a link to go to the cart after each item will increase the return rate. </p>
+    <p><b>Null Hypotheses:</b> Adding a link to the cart after each item will not affect the return rate.</p>
+    <p><b>Alternate Hypotheses:</b> Adding a link to the cart after each item will increase the return rate. </p>
 
  <h2>Data Collection</h2>
- <p>I collected data by deploying my two websites on heroku as a single website that will randomly select whether to show Website A or Website B. I then sent this link to other students in the class who were told to complete the task of adding $150 worth of cacti to the cart. 24 students visited the website and completed the task (I removed 3 visitors who arrived at the webpage and did not do anything). I retrieved the data from heroku concerning time to completion and return rate using heroku logs, then converted it to a csv so that I could process and clean it by hand.  </p>
+ <p>I collected data by deploying my two websites on heroku as a single website that randomly selects whether to show Website A or Website B each time it is loaded. I then sent this link to other students in the class who were told to complete the task of adding $150 worth of cacti to the cart. 24 students visited the website and completed the task (there were an additional 3 visitors who I removed because they arrived at the webpage and did not do anything). I retrieved time to completion and return rate data from heroku using heroku logs, then converted it to a csv so that I could process and clean it by hand using Google Sheets.  </p>
   
 
     <h2> Infographic </h2>
@@ -53,10 +55,10 @@
 </div>
 
     <h2>Conclusions & Takeaways </h2>
-    <p>Based on the findings of this study, there is no statistical significance between the two websites I tested in terms of time to completion and return rate. Given this, I would conclude that the changes I implemented––making the price more prominent and adding links to the cart––were not big enough or important changes to meaningfully impact the user experience. However, a few limitations that I would want to address before making this conclusion are:</p>
+    <p>Based on the findings of this study, there is no statistical significance between the two websites in terms of time to completion and return rate, so we must accept the null hypotheses. Given this, I would conclude that the changes I implemented––making the price more prominent and adding links to the cart––were not big or important enough to meaningfully impact the user experience. However, a few limitations that I would want to address before making this conclusion are:</p>
     <ul>
     	<li>The people who were tested were more likely to have seen  Website A’s format before because this was the base template given to us by TAs, which many others kept as well.  Therefore, it is possible that since people were familiar with this interface, they had already learned it which is what caused it to have better time to completion and return rate averages.</li>
-    	<li>The users tested in this study were not actually buying cacti, so there is a question of how representative they are to real users. They also tested my websites along with many others, so they might not have taken the task as seriously or deliberately as real users may.</li>
+    	<li>The users tested in this study were not actually buying cacti, so there is a question of how representative they are to real users. They also tested my websites along with many others, so they might not have taken the task as seriously or deliberately as real users would.</li>
     	<li>I was only able to collect data from 24 users. More data would have been better to make a confident conclusion. </li>
     </ul>
 
